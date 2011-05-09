@@ -7,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Xml;
 using System.Xml.Linq;
+using Open.Documents.Handlers;
 using Open.Documents.Resources;
 using OpenRasta.Configuration;
 using OpenRasta.Web;
@@ -19,13 +20,19 @@ namespace Open.Documents
         public void Configure()
         {
             ResourceSpace.Uses.ConventionsFrom(this);
+
             ResourceSpace.Has.Resource<Home>()
                 .Anywhere
                 .RenderedByAspx("~/Views/Home.aspx");
+
+            ResourceSpace.Has.Resource<SearchResults>()
+                .Uri("search-results/{search}")
+                .Handler<SearchResults>().RenderedByAspx("~/Views/SearchResults.aspx");
+
             ResourceSpace.Has.Resource<ContactUs>()
                 .Uri("/contact-us?email={email}&comment={comment}")
                 .And.Uri("/contact-us/{email}/{comment}");
-
+            
             ResourceSpace.Uses.XmlDataContract();
         }
     }

@@ -9,14 +9,13 @@
 <body>
     <%= h1[Resource.Title] %>
     <hr />
-    <h1>Contact us</h1>
+    <h1>Search for a Document</h1>
 
     
-    <form action="/contact-us" method=post>
-    <input type=text name=email /><br />
-    <textarea name=comment></textarea>
+    <form action="/search-results" method="post">
+    <input type="search" name="search" /><br />
     <br />
-    <input type=submit />
+    <input type="submit" />
     </form>
 </body>
 </html>
