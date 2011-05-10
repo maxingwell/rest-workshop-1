@@ -12,6 +12,7 @@
     <div>
         <input type="text" name="search" style="width:450px;" 
             value="You searched for: <%= Resource.Search %>" /><br />
+
         
     </div>
 </body>
