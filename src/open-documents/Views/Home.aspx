@@ -13,8 +13,8 @@
     <h1>Search for a Document</h1>
 
     
-    <form action="/search-results" method="post">
-    <input type="search" name="search" /><br />
+    <form action="/search" method="post">
+    <input type="search" name="term" /><br />
     <br />
     <input type="submit" />
     </form>

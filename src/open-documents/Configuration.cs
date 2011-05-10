@@ -27,7 +27,7 @@ namespace Open.Documents
 
             ResourceSpace.Has.Resource<SearchResults>()
                 .Uri("search-results/{search}")
-                .Handler<SearchResults>().RenderedByAspx("~/Views/SearchResults.aspx");
+                .Handler<SearchResultsHandler>().RenderedByAspx("~/Views/SearchResults.aspx");
 
             ResourceSpace.Has.Resource<ContactUs>()
                 .Uri("/contact-us?email={email}&comment={comment}")
