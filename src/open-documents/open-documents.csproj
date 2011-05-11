@@ -52,6 +52,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Document.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\SearchResults.aspx" />
     <Content Include="Web.config">
@@ -66,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Handlers\ContactUsHandler.cs" />
     <Compile Include="Handlers\DocumentHandler.cs" />
     <Compile Include="Handlers\SearchHandler.cs" />

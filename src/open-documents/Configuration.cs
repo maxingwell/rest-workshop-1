@@ -33,7 +33,16 @@ namespace Open.Documents
                 .Uri("/contact-us?email={email}&comment={comment}")
                 .And.Uri("/contact-us/{email}/{comment}");
             
-            ResourceSpace.Uses.XmlDataContract();
+            //ResourceSpace.Has.Resource<DocumentInfo>()
+
+
+            ResourceSpace.Has.Resource<Document>()
+                .Uri("/document/{id}")
+                .Handler<DocumentHandler>().RenderedByAspx("~/Views/Document.aspx");
         }
+    }
+
+    public class DocumentInfo
+    {
     }
 }
